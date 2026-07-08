@@ -1,6 +1,7 @@
 import webbrowser
-import os
 from pathlib import Path
 
+webbrowser.register("brave", None, webbrowser.BackgroundBrowser("brave-browser"))
+
 path = Path(__file__).parent / "calculator.html"
-webbrowser.open(path.resolve().as_uri())
+webbrowser.get("brave").open(path.resolve().as_uri())
